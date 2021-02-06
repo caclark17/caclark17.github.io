@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us"></html>
+<html>
+    <head>
+       <meta charset="utf-8">
+       <title>Pay Rate After Tax</title>
+       <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Exam Part Two: Question One</h1>
+            <h2>Cynthia Clark</h2>
+        </header>
+        <main>
+            <h3>Get Pay Rate After Tax</h3>
+            <label>Enter Number Of Regular Hours: <input type="text" id="regHours"></label>
+            <label>Enter Number Of Overtime Hours: <input type="text" id="otHours"></label>
+            <label><button onclick="getPay()">Get Pay Rate After Tax</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Cynthia Clark &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            /*Input: Number of regular hours worked
+            *Number of overtime hours worked
+            *Processing: Calculate tax from regular hours and subtract
+            *Calculate tax from overtime hours and subtract
+            *Add remaining pay together
+            *Output: Pay received after tax
+            */
+            
+        function getPay() {
+            //INPUT
+            const regPay = 15.00
+            const otPay = 22.50
+            let regHours = parseFloat(document.getElementById('regHours').value);
+            let otHours = parseFloat(document.getElementById('otHours').value);
+            let tax = .15
+            //PROCESSING
+            let payBeforeTax = regPay * regHours + otPay * otHours
+            let taxDeducted = payBeforeTax * .15
+            let payAfterTax = payBeforeTax - taxDeducted
+
+        }
+        </script>
+    </body>
+</html>
