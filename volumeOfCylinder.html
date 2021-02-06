@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us"></html>
+<html>
+    <head>
+       <meta charset="utf-8">
+       <title>Volume of Cylinder</title>
+       <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Exam Part 2: Question 2</h1>
+            <h2>Cynthia Clark</h2>
+        </header>
+        <main>
+            <h3>Calculate the Volume of a Cylinder</h3>
+            <label>Enter the Radius of the Circle: <input type="text" id="radius"></label>
+            <label>Enter the Height of the Circle: <input type="text" id="height"></label>
+            <label><button onclick="volume()">Calculate the Volume</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Cynthia Clark &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            /* INPUT: The radius of the circle
+            * The height of the circle
+            * PROCESSING: Pie times radius squared times height
+            * OUTPUT: The volume of the circle
+            */ 
+           function volume() {
+               //INPUT
+               let radius = parseFloat(document.getElementById('radius').value);
+               let height = parseFloat(document.getElementById('height').value);
+               //PROCESSING
+               let volume = 3.14 * radius * radius * height
+               //OUTPUT
+               document.getElementById('output').innerHTML = math.round(volume)
+           }
+        </script>
+    </body>
+</html>
