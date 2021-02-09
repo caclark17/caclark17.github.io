@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"></html>
-<html>
+<html lang="en-us">
     <head>
        <meta charset="utf-8">
        <title>Convert Pounds to Kilograms</title>
@@ -12,7 +11,7 @@
             <h2>Cynthia Clark</h2>
         </header>
         <main>
-            <h3>Add Two Numbers</h3>
+            <h3>Convert Pounds to Kilograms</h3>
             <label>Enter Number of Pounds: <input type="text" id="pounds"></label>
             <label><button type="button" onclick="cPToK()">Convert Pounds to Kilograms</button></label>
             <hr>
@@ -21,20 +20,6 @@
         <footer>
             &copy;2021 &bull; Cynthia Clark &bull; BYU-Idaho &bull; CIT 160
         </footer>
-        <script>
-            /* Input: a number in pounds
-            * Processing: convert the number from pounds to kilograms by using k = p * 0.45359237
-            *Output: the pounds converted to kilograms
-            */
-           function cPToK() {
-            //INPUT 
-            let pounds = parseFloat(document.getElementById('pounds').value);
-            //Convert pounds to kilograms
-            let kilograms = pounds * 0.45359237
-            //OUTPUT
-            //Round to one digit after the decimal
-            document.getElementById('output').innerHTML = kilograms.toFixed(1)
-           }
-        </script>
+        <script src="main.js"></script>
     </body>
 </html>
