@@ -1,3 +1,10 @@
+/*INPUT: the weather
+*PROCESSING: Assign the correct type of shoe based on the weather
+*OUTPUT: What type of shoes the user should wear
+*/
+
+let weather = document.getElementById('weather').nodeValue;
+
 let shoes;
 switch (weather) {
 case hot:
