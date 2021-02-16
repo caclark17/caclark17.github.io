@@ -2,24 +2,27 @@
 *PROCESSING: Assign the correct type of shoe based on the weather
 *OUTPUT: What type of shoes the user should wear
 */
-
+function footwear() {
 let weather = document.getElementById('weather').nodeValue;
-
+let hot='sandals';
 let shoes;
 switch (weather) {
-case hot:
+case "hot":
 shoes = 'sandals';
 break;
-case rain:
+case "rain":
 shoes = 'galoshes';
 break;
-case snow:
+case "snow":
 shoes = 'boots';
 break;
-case unknown:
+case "unknown":
 shoes = 'shoes';
 break;
 }
+console.log(weather);
 
 //Output a message to the user about which shoes to wear
 document.getElementById('output').innerHTML = "Wear " + shoes + " today.";
+}
+
