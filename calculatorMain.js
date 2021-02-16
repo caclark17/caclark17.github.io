@@ -33,8 +33,9 @@ function solveProblem() {
     let message;
     if (answer == correctAnswer) {
         message = "Correct!"
-    } else {
+    } 
+    else {
         message = "Incorrect"
     }
-    document.getElementById("output").innerHTML = message;
+    document.getElementById('output').innerHTML = message;
 }
