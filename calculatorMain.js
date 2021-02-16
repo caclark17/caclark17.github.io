@@ -30,10 +30,10 @@ function solveProblem() {
             answer = number1 / number2;
             break;
     }
-
+    let message;
     if (result == answer) {
         correct = "Correct!";
     } else {
         correct = "Incorrect";
     }
-    document.getElementById("result").innerHTML = answer;
+    document.getElementById("output").innerHTML = message;

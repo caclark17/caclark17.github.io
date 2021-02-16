@@ -11,13 +11,17 @@
             <h2>Cynthia Clark</h2>
         </header>
         <main>
-            <h3>Calculator</h3>
-            <label>Enter Number One: <input type="text" id="number1"></label>
-            <label>Enter An Arithmetic Operator: <input type="text" id="operator"></label>
-            <label>Enter Number Two: <input type="text" id="number2"></label>
-            <label>Enter the Answer to Your Math Problem: <input type="text" id="answer"></label>
+            <h3>Test Your Math Skills!</h3>
+            <label><input type="text" id="number1" placeholder="Enter Number"></label>
+            <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select>
+            <label><input type="text" id="number2" placeholder="Enter Number"></label>
+            <label>Answer<input type="text" id="answer"></label>
             <label><button onclick="solveProblem()">Solve Problem</button></label>
-            <hr>
             <p><span id="output"></span></p>
         </main>
         <footer>
