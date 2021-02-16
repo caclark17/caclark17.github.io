@@ -13,14 +13,22 @@ function solveProblem() {
     let result;
     let correct;
 
-    if (operator == "+") {
-        result = number1 + number2;
-    } else if (operator== "-") {
-        result = number 1 - number2;
-    } else if (operator = "/") {
-        result = number1 / number2;
-    } else if (operator = "*") {
-        result = number1 * number2;
+    switch (operator) {
+        case "+":
+        answer = number1 + number2;   
+        break;
+
+        case "-":
+        answer = number1 - number2;
+        break;
+
+        case "*":
+            answer = number1 * number2;
+            break;
+        
+        case "/":
+            answer = number1 / number2;
+            break;
     }
 
     if (result == answer) {
@@ -28,3 +36,4 @@ function solveProblem() {
     } else {
         correct = "Incorrect";
     }
+    document.getElementById("result").innerHTML = answer;
