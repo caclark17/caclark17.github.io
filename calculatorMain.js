@@ -11,32 +11,30 @@ function solveProblem() {
     let number2 = parseFloat(document.getElementById("number2").value);
     let answer = parseFloat(document.getElementById("answer").value);
 
-    let correctAnswer;
-
     //Use a switch statement to compare user's answer to actual answer
-
+    let correctAnswer;
     switch (operator) {
         case "+":
-        answer = number1 + number2;   
-        break;
+            correctAnswer = number1 + number2;   
+            break;
 
         case "-":
-        answer = number1 - number2;
-        break;
+            correctAnswer = number1 - number2;
+            break;
 
         case "*":
-            answer = number1 * number2;
+            correctAnswer = number1 * number2;
             break;
         
         case "/":
-            answer = number1 / number2;
+            correctAnswer = number1 / number2;
             break;
     }
     let message;
     if (answer == correctAnswer) {
-        message = "Correct!";
+        message = "Correct!"
     } else {
-        message = "Incorrect";
+        message = "Incorrect"
     }
     document.getElementById("output").innerHTML = message;
 }
