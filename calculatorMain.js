@@ -5,13 +5,15 @@
 */
 
 function solveProblem() {
+    //Get numbers and operator selection from user
     let number1 = parseFloat(document.getElementById("number1").value);
     let operator = parseFloat(document.getElementById("operator").value);
     let number2 = parseFloat(document.getElementById("number2").value);
     let answer = parseFloat(document.getElementById("answer").value);
 
-    let result;
-    let correct;
+    let correctAnswer;
+
+    //Use a switch statement to compare user's answer to actual answer
 
     switch (operator) {
         case "+":
@@ -31,9 +33,9 @@ function solveProblem() {
             break;
     }
     let message;
-    if (result == answer) {
-        correct = "Correct!";
+    if (answer == correctAnswer) {
+        message = "Correct!";
     } else {
-        correct = "Incorrect";
+        message = "Incorrect";
     }
     document.getElementById("output").innerHTML = message;
