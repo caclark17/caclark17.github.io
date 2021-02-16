@@ -7,7 +7,7 @@
 function solveProblem() {
     //Get numbers and operator selection from user
     let number1 = parseFloat(document.getElementById("number1").value);
-    let operator = parseFloat(document.getElementById("operator").value);
+    let operator = document.getElementById("operator").value;
     let number2 = parseFloat(document.getElementById("number2").value);
     let answer = parseFloat(document.getElementById("answer").value);
 
@@ -39,3 +39,4 @@ function solveProblem() {
         message = "Incorrect";
     }
     document.getElementById("output").innerHTML = message;
+}
