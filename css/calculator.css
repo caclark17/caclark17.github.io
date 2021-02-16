@@ -39,6 +39,6 @@ h3 {
 }
 
 label {
-	display: block;
+	display: inline-block;
 	margin: 3px;
 }
