@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Alarm</title>
+    </head>
+    <script>
+        /*Input: Get the day of the week
+        *Processing: Use if statements to determine whether to get up or sleep in
+        *Output: Let's user know if they should get up or sleep in
+        */
+       function sleepOrWake() {
+           let now = new Date();
+           let month = now.getMonth;
+           let dayOfMonth = now.getDate();
+           let dayOfWeek = now.getDay();
+
+           if (dayOfMonth == 1 && month == 0) {
+               alarm = "Sleep In";
+           }
+           else if (dayOfMonth == 4 && month == 6) {
+               alarm = "Sleep In";
+           }
+           else if (dayOfMonth == 25 && month == 11) {
+               alarm = "Sleep In";
+           }
+           else if (dayOfWeek == 6 || dayOfWeek == 0) {
+               alarm = "Sleep In";
+           }
+           else {
+               alarm = "Get up!";
+           }
+           document.getElementById("output").innerHTML = "Today you have to " + alarm;
+       }
+    </script>
+    <body>
+        <button type="button" onclick="sleepOrWake()" size="10">Sleep In or Get Up</button>
+        <div id="output"></div>
+
+    </body>
+</html>

@@ -20,7 +20,6 @@ case "unknown":
 shoes = 'shoes';
 break;
 }
-console.log(weather);
 
 //Output a message to the user about which shoes to wear
 document.getElementById('output').innerHTML = "Wear " + shoes + " today.";
