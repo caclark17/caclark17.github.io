@@ -3,7 +3,7 @@
 *OUTPUT: What type of shoes the user should wear
 */
 function footwear() {
-let weather = document.getElementById('weather').nodeValue;
+let weather = document.getElementById("weather").value;
 let hot='sandals';
 let shoes;
 switch (weather) {
