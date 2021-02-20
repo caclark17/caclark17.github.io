@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Alarm</title>
+        </head>
+
+        <body>
+            <label>Please enter the subtotal <input type="text" id="subtotal"></label>
+            <label><button type ="button" onclick ="discount()" size ="10">Sales Total</button></label>
+            <div id="output"></div>
+        </body>
+        <script>
+            /*INPUT: Get the customer's subtotal
+            *PROCESSING: Using a compound condition, Subtract 10% if the total is 
+            *more than $50 AND it is Tuesday(2) or Wednesday(3)
+            *OUTPUT: Total amount with 6% sales tax
+            */
+
+            function discount() {
+                let dayOfWeek = new Date().getDay();
+                let subtotal = parseFloat(document.getElementById("subtotal").value);
+                let total;
+
+                if (subtotal > 50 && dayOfWeek == 2) {
+                    total = subtotal * 0.9;
+                }
+                else if (subtotal > 50 && dayOfWeek == 3) {
+                    total = subtotal * 0.9;
+                }
+                else {
+                total = subtotal;
+            }
+                salesTotal = total * 1.06;
+    
+                document.getElementById("output").innerHTML = "Your total is $" + salesTotal.toFixed(2);
+
+            }
+        </script>
+</html> 
