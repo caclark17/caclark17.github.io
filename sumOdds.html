@@ -12,8 +12,8 @@
         </header>
         <main>
             <h3>Sum of Odd Numbers</h3>
-            <label>Enter An Integer: <input type="text" id="number"></label>
-            <label><button onclick="getSum()">Get Sum Of Odd Numbers</button></label>
+            <label>Enter An Integer: <input type="text" id="integer"></label>
+            <label><button onclick="sumOdds()">Get Sum Of Odd Numbers</button></label>
             <p><span id="output"></span></p>
         </main>
         <footer>
@@ -24,11 +24,13 @@
             *Processing: All of the odd numbers between 1 and i are added together
             *Output: The sum of all the odd numbers between 1 and i.
             */
-           function sumOdds() {
-               let i = parseInt(document.getElementById('number').value);
-               
-
+           let n = parseInt(document.getElementById('integer').value);
+           function sumOdds(n) {
+               let sum = 0;
+               for (let i = 1; i <= n; i += 2) {
+                   sum += 1;
            }
+        }
         </script>
     </body>
 </html>
