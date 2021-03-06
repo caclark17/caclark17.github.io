@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+       <meta charset="utf-8">
+       <title>Five Times</title>
+       <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Week 9: Five Times</h1>
+            <h2>Cynthia Clark</h2>
+        </header>
+        <main>
+            <h3>Five Times</h3>
+            <label>Enter An Upper Limit Integer: <input type="text" id="upper"></label>
+            <label><button onclick="fiveTimes()">Get Results</button></label>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Cynthia Clark &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            /* Write a program to display the five times table from 1 to 12 using
+            * a loop structure
+            */
+
+            function fiveTimes() {
+            let multiplyNumber = 5;
+            let upper = parseInt(document.getElementById("upper").value);
+            let output = '';
+            let sum = 0;
+
+            for (let i = 1; i <= upper; i++) {
+            sum = i * multiplyNumber;
+            output += multiplyNumber + ' * ' + i + ' = ' + sum + '<br>';
+            }
+            document.getElementById('output').innerHTML = output;
+            }
+
+        </script>
+    </body>
+</html>
