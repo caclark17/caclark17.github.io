@@ -12,7 +12,6 @@
         </header>
         <main>
             <h3>Five Times</h3>
-            <label>Enter An Upper Limit Integer: <input type="text" id="upper"></label>
             <label><button onclick="fiveTimes()">Get Results</button></label>
             <p><span id="output"></span></p>
         </main>
@@ -26,11 +25,10 @@
 
             function fiveTimes() {
             let multiplyNumber = 5;
-            let upper = parseInt(document.getElementById("upper").value);
             let output = '';
             let sum = 0;
 
-            for (let i = 1; i <= upper; i++) {
+            for (let i = 1; i <= 12; i++) {
             sum = i * multiplyNumber;
             output += multiplyNumber + ' x ' + i + ' = ' + sum + '<br>';
             }

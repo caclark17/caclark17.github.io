@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+       <meta charset="utf-8">
+       <title>Exam 2 Question 3</title>
+       <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>Exam 2 Question 3</h1>
+            <h2>Cynthia Clark</h2>
+        </header>
+        <main>
+            <label>Enter a starting number: <input type="text" id="start"></label>
+            <label>Enter an ending number: <input type="text" id="end"></label>
+            <label>Enter a divisor: <input type="text" id="divisor"></label>
+            <label><button onclick="outputNumbers()">Output Numbers</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Cynthia Clark &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            /*INPUT: a start number, end number, and divisor
+            *PROCESSING: all integers divisible by divisor from start to end
+            *OUTPUT: integers separated by spaces
+            */
+
+            function outputNumbers() {
+                let output = '';
+                let start = parseInt(document.getElementById("start").value);
+                let end = parseInt(document.getElementById("end").value);
+                let divisor = parseInt(document.getElementById("divisor").value);
+                let i = 1;
+
+                while (i >= start && i <= end) {
+                    output = i / divisor;
+                }
+                document.getElementById("output").innerHTML = output;
+
+            }
+        </script>
+    </body>
+</html>
