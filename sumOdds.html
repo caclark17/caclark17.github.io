@@ -24,13 +24,14 @@
             *Processing: All of the odd numbers between 1 and i are added together
             *Output: The sum of all the odd numbers between 1 and i.
             */
-           let n = parseInt(document.getElementById('integer').value);
-           function sumOdds(n) {
+           
+           function sumOdds() {
+               let n = parseInt(document.getElementById('integer').value);
                let sum = 0;
                for (let i = 1; i <= n; i += 2) {
                    sum += 1;
            }
-           document.getElementById('sumOdds').innerHTML = sum;
+           document.getElementById('output').innerHTML = sum;
         }
         </script>
     </body>
