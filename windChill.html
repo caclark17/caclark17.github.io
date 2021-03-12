@@ -12,9 +12,9 @@
         </header>
         <main>
             <h3>Wind Chill</h3>
-            <label>Enter the temperature: <input type="text" id="temp"></label>
-            <label>Enter the wind speed: <input type="text" id="windSpeed"></label>
-            <label><button onclick="windChill()">Wind Chill</button></label>
+            <label>Enter the temperature: <input type="text" id="temperature"> F</label>
+            <label>Enter the wind speed: <input type="text" id="windSpeed"> MPH</label>
+            <label><button onclick="doInputOutput()">Wind Chill</button></label>
             <hr>
             <p><span id="output"></span></p>
         </main>
@@ -22,20 +22,26 @@
             &copy;2021 &bull; Cynthia Clark &bull; BYU-Idaho &bull; CIT 160
         </footer>
         <script>
-            /*INPUT:
-            *PROCESSING:
-            *OUTPUT: 
+            /*INPUT: User inputs a temperature in fahrenheit and the speed of the wind
+            *PROCESSING: A methematical formula is used to calculate the windspeed
+            *OUTPUT: The wind chill temperature
             */
 
             function doInputOutput() {
-
+                let temperature = parseFloat(document.getElementById("temperature").value);
+                let windSpeed = parseFloat(document.getElementById("windSpeed").value);
+                let windchill = '';
+                if (temperature < 50 && windSpeed >= 3) {
+                    windchill = windChill(temperature, windSpeed);
+                }
+                document.getElementById('output').innerHTML = "The windchill is " + windchill.toFixed(2);
             }
 
             function windChill(tempF, speed) {
-                let temperature = parseFloat(document.getElementById("temp").value);
-                let windSpeed = parseFloat(document.getElementById("windSpeed").value);
-
+              return 35.74 + 0.6215 * tempF - 35.75 * Math.pow(speed, 0.16) + 0.4275 * tempF * Math.pow(speed, 0.16);
+              
             }
+            
         </script>
     </body>
 </html>
