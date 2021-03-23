@@ -4,12 +4,14 @@
        <meta charset="utf-8">
        <title>Loan</title>
        <link href="css/style.css" rel="stylesheet"/>
+       
     </head>
     <body>
         <header>
             <h1>Week 11: Loan</h1>
             <h2>Cynthia Clark</h2>
         </header>
+        
         <main>
             <h3>Loan</h3>
             <label>Amount Invested(principal): <input type="text" id="principal"></label>
@@ -42,11 +44,11 @@
                 let years = parseFloat(document.getElementById('years').value);
                 let periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
                 let results = computePayment(principal, annualRate, years, periodsPerYear);
-
+    
                 document.getElementById('output1').innerHTML = results.toFixed(2);
-
+    
             }
-
+    
                 function computePayment(principal, annualRate, years, periodsPerYear) {
                 /*computes and returns the monthly payment for a loan with a fixed annual interest rate
                 *the formula is p = ar / (1 - (1+r)^-n)
@@ -74,13 +76,13 @@
                let years = parseFloat(document.getElementById('years').value);
                let periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
                let numberOfPaymentsPaidToDate = parseFloat(document.getElementById('numberOfPaymentsPaidToDate').value);
-
-               let payment = computePayment(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
-
+    
+               let payment = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
+    
                document.getElementById('output2').innerHTML = payment.toFixed(2);
-
+    
             }
-
+    
                function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
                 /*computes and returns the balance for a loan with a fixed annual interest rate
                 *the formula is b = a (1 + r)^d - (p((1 + r)^d - 1)) / r
@@ -94,14 +96,13 @@
                 let r = annualRate / periodsPerYear;
                 let n = years * periodsPerYear;
                 let d = numberOfPaymentsPaidToDate;
-
-                return (Math.pow(1+r, d) * a - ((Math.pow(1 + r, d-1) * p) / r).toFixed(2)
-
-               }
-
-        
+                let p = payment
     
-           
-        </script>
+                let payment = computePayment(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
+    
+                return (Math.pow(1+r, d) * a - ((Math.pow(1 + r, d-1) * p) / r).toFixed(2));
+               }
+               </script>
+    
     </body>
 </html>
