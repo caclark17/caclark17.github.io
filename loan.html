@@ -44,6 +44,7 @@
                 let years = parseFloat(document.getElementById('years').value);
                 let periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
                 let results = computePayment(principal, annualRate, years, periodsPerYear);
+                console.log(results);
     
                 document.getElementById('output1').innerHTML = results.toFixed(2);
     
@@ -92,13 +93,16 @@
                 *p = payment per period
                 *d = the number of payments paid to date
                 */
+
+                let payment = computePayment(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
+
                 let a = principal;
                 let r = annualRate / periodsPerYear;
                 let n = years * periodsPerYear;
                 let d = numberOfPaymentsPaidToDate;
-                let p = payment
+                let p = payment;
     
-                let payment = computePayment(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
+                
     
                 return (Math.pow(1+r, d) * a - ((Math.pow(1 + r, d-1) * p) / r).toFixed(2));
                }

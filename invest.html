@@ -32,10 +32,13 @@
                 *Displays the result to the user
                 */
                let principal = parseFloat(document.getElementById('principal').value);
-               let periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
                let annualRate = parseFloat(document.getElementById('annualRate').value);
                let years = parseFloat(document.getElementById('years').value);
-               document.getElementById('output').value = computeFutureValue(principal, annualRate, years, periodsPerYear);
+               let periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
+               console.log(principal, annualRate, years, periodsPerYear);
+               let result = computeFutureValue(principal, annualRate, years, periodsPerYear);
+               console.log(result);
+               document.getElementById('output').innerHTML = computeFutureValue(principal, annualRate, years, periodsPerYear);
 
             }
 
