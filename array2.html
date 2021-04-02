@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <label><button onclick="test()">Test</button></label>
+        <p><span id="output"></span></p>
+    </main>
+    
+</body>
+<script>
+    /* Defining Table
+ * Input: no user input
+ * Processing: Test the countEvens and multiply functions by calling them.
+ * Output: The values returned from the countEvens and multiply functions.
+ */
+function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+    // Test the countEvens function by calling it two times.
+    let count1 = countEvens(list1);
+    let count2 = countEvens(list2);
+
+    // Test the multiply function by calling it two times.
+    let mult1 = multiply(list1, 3);
+    let mult2 = multiply(list2, 4);
+
+    // Build a string to display to the user.
+    let output =
+            count1 + '<br>' + 
+            count2 + '<br>' + 
+            mult1 + '<br>' + 
+            mult2;
+
+    // Display the output string for the user to see.
+    document.getElementById('output').innerHTML = output;
+}
+
+/*Write a function named countEvens that counts and returns the number of even integers in an array.
+*INPUT: Use list1 and list2 from function text
+*PROCESSING: eliminate all numbers that are not even using a for loop
+*OUTPUT: only the even numbers from the arrays
+*/
+function countEvens(list) {
+   let evens = 0;
+   for (let i = 0; i < list.length; i++) {
+       if (list[i] % 2 == 0) {
+           evens ++;
+       }
+   }
+   return evens;
+        
+}
+
+/*Write a function to multiple each element in an array by some value and to return the products in an array.
+*INPUT: list1 and list2 arrays
+*PROCESSING: Use a for loop to multiply each element
+*OUTPUT; 
+*/
+
+function multiply(list, multiplier) {
+    let newList = new Array(list.length);
+    for (let i = 0; i < list.length; i++) {
+        newList[i] = list[i] * multiplier;
+    }
+    return newList;
+
+}
+</script>
+</html>
